@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5001
 const corsOptions = {
     origin: 'http://localhost:5000',
     origin: 'http://localhost:5001',
+    origin: 'http://localhost:5173',
     origin: 'http://localhost:3000',
 }
 
