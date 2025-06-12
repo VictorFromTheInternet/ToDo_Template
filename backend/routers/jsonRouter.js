@@ -1,35 +1,34 @@
-import { error } from 'console';
-import { FILE } from 'dns';
 import express from 'express';
-import fs from 'fs:node/promises';
-import path from 'path';
+import {
+    getAll,
+    getById,
+    create,
+    update,
+    deleteById
+} from '../controllers/jsonController.js';
 
 const router = express.Router();
 
-const FILE_PATH = path.join('..', 'db.json');
-
-// get all
+// root
 router.get('/', (req,res)=>{
-    try{
-        console.log(FILE_PATH)
-        res.send(FILE_PATH)
-
-    }catch(err){
-        res.status(500).json({error: 'Internal Server Error'});
-    }
+    res.send('JSON Router is working!')
 })
 
-// get by id
 
+// get all
+router.get('/get-all', getAll)
+
+// get by id
+router.get('/get/:id', getById)
 
 // create
-
+router.post('/create', create)
 
 // update
-
+router.patch('/update/:id', update)
 
 // delete by id
-
+router.delete('/delete/:id', deleteById)
 
 
 export default router; 

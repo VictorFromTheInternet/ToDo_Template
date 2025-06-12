@@ -1,12 +1,1 @@
-{
-    "todoList":[
-        {
-            "id":"123",
-            "title":"test",
-            "description":"test description",
-            "completed":false
-        }
-    ]
-
-
-}
+{"todoList":[{"title":"test","description":"lorem ipsum","completed":true,"id":"397fd603-c63a-4c0a-9514-1ad45bc26033"},{"id":"7972acef-9cdb-4496-9d91-876873012187","title":"walk the dog","description":"walk the dog every morning","completed":false}]}
