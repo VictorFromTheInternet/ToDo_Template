@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './TodoList.css'; 
 
 const API_URL = 'http://localhost:5000/api';
 
@@ -48,10 +49,10 @@ const TodoList = () => {
         placeholder="Description"
       />
       <button onClick={handleAdd}>Add</button>
-      <ul>
+      <ul className="list">
         {todos.map(todo => (
-          <li key={todo.id}>
-            <b>{todo.title}</b>: {todo.description}
+          <li key={todo.id} >
+            <p><b>{todo.title}</b>: {todo.description}</p>            
             <button onClick={() => handleDelete(todo.id)}>Delete</button>
           </li>
         ))}
